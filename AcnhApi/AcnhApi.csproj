@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Pomelo.EntityFrameworkCore.MySql" />
+    <None Remove="DataAccessors\" />
+    <None Remove="DataAccessors\DbContext\" />
+    <None Remove="DataAccessors\Entities\" />
+    <None Remove="Poco\" />
+    <None Remove="Poco\Dtos\" />
+    <None Remove="Poco\Helpers\" />
+    <None Remove="Controllers\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccessors\" />
+    <Folder Include="DataAccessors\AcnhDbContext\" />
+    <Folder Include="DataAccessors\Entities\" />
+    <Folder Include="Poco\" />
+    <Folder Include="Poco\Dtos\" />
+    <Folder Include="Poco\Helpers\" />
+    <Folder Include="Controllers\Models\" />
+  </ItemGroup>
+</Project>
